@@ -2,7 +2,7 @@ name: Sync Internal/External
 on:
   push:
     branches:
-      - internal/develop
+      - develop
 env:
   EXTERNAL_REPO: "Danny213123/test-sync-external"
   EXTERNAL_BRANCH: "main"
