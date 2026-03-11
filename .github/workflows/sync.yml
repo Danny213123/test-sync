@@ -52,6 +52,7 @@ jobs:
             git checkout -b temp-external "external/${{ env.EXTERNAL_BRANCH }}"
             git merge "${{ env.INTERNAL_BRANCH }}" \
               --no-edit \
+              --allow-unrelated-histories \
               -m "chore: sync from internal/develop ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
             git push external "HEAD:${{ env.EXTERNAL_BRANCH }}"
           else
